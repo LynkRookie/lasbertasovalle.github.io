@@ -1,0 +1,131 @@
+.footer {
+  background-color: #2D2D2D;
+  color: var(--color-white);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+.footer-logo h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--color-white);
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  background-color: var(--color-orange);
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-links-column h4 {
+  color: var(--color-orange);
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.footer-links-column ul {
+  list-style: none;
+}
+
+.footer-links-column ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links-column ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition);
+}
+
+.footer-links-column ul li a:hover {
+  color: var(--color-white);
+  padding-left: 5px;
+}
+
+.contact-list li,
+.hours-list li {
+  display: flex;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-message {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-logo {
+    text-align: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-links-column {
+    text-align: center;
+  }
+  
+  .contact-list li,
+  .hours-list li {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,111 @@
+.reservations {
+  background-color: var(--color-white);
+  padding: 5rem 0;
+}
+
+.reservations-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.reservations-image {
+  position: relative;
+}
+
+.reservations-image::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--color-orange);
+  z-index: -1;
+}
+
+.reservations-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.reservations-info h3 {
+  color: var(--color-orange);
+  margin-bottom: 1.5rem;
+}
+
+.reservation-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+}
+
+.step-number {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: var(--color-text);
+  margin-bottom: 0.3rem;
+}
+
+.delivery-info {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.delivery-list {
+  list-style: none;
+  margin: 1rem 0 2rem;
+}
+
+.delivery-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.delivery-icon {
+  color: var(--color-orange);
+}
+
+.reservation-cta {
+  margin-top: 2rem;
+}
+
+.reservation-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  .reservations-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .reservations-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
